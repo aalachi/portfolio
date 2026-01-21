@@ -11,7 +11,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProjectWebmac from './pages/projects/ProjectWebmac';
 import PostAuth from './pages/posts/PostAuth';
-import PostFront from './pages/posts/PostFront';
+import PostDesignPatterns from './pages/posts/PostDesignPatterns';
 import PostVim from './pages/posts/PostVim';
 import ProjectCalculator from './pages/projects/ProjectCalculator';
 import PostDebate from './pages/posts/PostDebate';
@@ -49,7 +49,7 @@ root.render(
 
           <Route path="/posts/vim" element={<PostVim />} />
           <Route path="/posts/auth" element={<PostAuth />} />
-          <Route path="/posts/front" element={<PostFront />} />
+          <Route path="/posts/design-patterns" element={<PostDesignPatterns />} />
           <Route path="/posts/debate" element={<PostDebate />} />
           <Route path="/posts/rest" element={<PostRest />} />
 
