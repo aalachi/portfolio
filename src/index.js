@@ -20,6 +20,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectFixxpay from './pages/projects/ProjectFixxpay';
+import ProjectMossaq from './pages/projects/ProjectMossaq';
 
 
 
@@ -48,6 +49,7 @@ root.render(
           <Route path="/projects/calculator" element={<ProjectCalculator />} />
           <Route path="/projects/servauth" element={<ProjectServauth />} />
           <Route path="/projects/fixxpay" element={<ProjectFixxpay />} />
+          <Route path="/projects/mossaq" element={<ProjectMossaq />} />
 
           <Route path="/posts/vim" element={<PostVim />} />
           <Route path="/posts/auth" element={<PostAuth />} />

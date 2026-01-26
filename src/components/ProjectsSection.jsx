@@ -5,6 +5,7 @@ import Datano from "../assets/projects/datano.png" ;
 import Bapz from "../assets/projects/bapzvscode.png";
 import Compiler from "../assets/projects/compiler.png";
 import Calculator from "../assets/projects/calculator.png";
+import Mossaq from "../assets/projects/mossaq3.png" ;
 
 
 const ProjectSection = () => {
@@ -16,6 +17,25 @@ const ProjectSection = () => {
                 <h2 data-aos="slide-down" data-aos-delay="200" data-aos-duration="600" data-aos-offset="150">Code Playgrounds</h2>
 
                 <div className={styles.projectsContainer}>
+                    <Link 
+                        className={styles.projectWrapperMossaq} 
+                        to="/projects/mossaq"
+                        data-aos="flip-left" 
+                        data-aos-delay="850"
+                        data-aos-duration="700"
+                        data-aos-offset="150"
+                    >
+                        <div className={styles.project}>
+                            <div className={styles.projectImage}>
+                                <img alt="Mossaq - Music Library and Streaming Platform" src={Mossaq} width={500} />
+                            </div>
+                            <div id="projectText" className={styles.projectText}>
+                                <h3>Mossaq</h3>
+                                <p></p><p>A music library and streaming platform for everyone.</p><p></p>
+                            </div>
+                        </div>
+                    </Link>
+
                     <Link 
                         className={styles.projectWrapperServauth} 
                         to="/projects/servauth"

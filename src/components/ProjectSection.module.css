@@ -117,6 +117,7 @@
     right: 0px;
     justify-content: left;
     width: 60vw;
+    margin-top: 50px;
 }
 
 
@@ -125,6 +126,11 @@
     margin-top: 100px;
 }
 
+
+.projectWrapperMossaq{
+    z-index: 40;
+    margin-left: -50px;
+}
 
 .projectWrapperOne{
     z-index: 10;
@@ -140,6 +146,7 @@
 
 .projectWrapperThree{
     z-index: 10;
+    margin-top: -100px;
     margin-left: -100px;
 }
 
@@ -214,9 +221,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
 
     }
 
+    
+
+    .content{
+        width: 90%;
+        padding: 0;
+    }
     .projectWrapperOne {
         margin: 0;
     }
@@ -240,8 +254,13 @@
         margin: 0;
     }
 
+    .projectWrapperMossaq{
+        margin: 0;
+    }
+
+
     .projectWrapperServauth{
-        margin-top: 20px;
+        margin: 0;
     }
 
 }
