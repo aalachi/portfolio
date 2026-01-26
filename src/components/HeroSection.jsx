@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Gear from '../assets/img/gear.svg';
 import styles from "./HeroSection.module.css";
 import ParticleSystem from './ParticleSystem';
 import TypeWriter from './TypeWriter';
