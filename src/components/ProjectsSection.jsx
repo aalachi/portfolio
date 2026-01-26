@@ -64,7 +64,7 @@ const ProjectSection = () => {
                     >
                         <div className={styles.project}>
                             <div className={styles.projectImage}>
-                                <img alt="Image Annotation Tool - React Canvas application by Aalachi Mohamed" src={Datano} width={500} />
+                                <img alt="Annotation Tool - React Canvas application by Aalachi Mohamed" src={Datano} width={500} />
                             </div>
                             <div id="projectText" className={styles.projectText}>
                                 <h3>Image Annotation</h3>

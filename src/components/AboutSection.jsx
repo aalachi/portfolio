@@ -9,7 +9,7 @@ const AboutSection = () => {
         <div id='about' className={styles.about} >
             <img 
                 src={"/a3la.jpg"} 
-                alt="Aalachi Mohamed - Software Engineer Portfolio Photo" 
+                alt="Aalachi Mohamed - Software Engineer Portfolio" 
                 className={styles.myphoto}
                 data-aos="fade-right"
                 data-aos-duration="1000"

@@ -1,131 +1,131 @@
 import { useRef, useEffect, useCallback } from 'react';
 import styles from './ParticleSystem.module.css';
 
+// Particle class for better performance
+class Particle {
+  constructor(canvas) {
+    this.canvas = canvas;
+    // Start particles distributed across screen immediately
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 1.2;
+    this.vy = Math.random() * 1.5 + 0.8;
+    this.size = Math.random() * 3 + 1.5;
+    this.opacity = Math.random() * 0.7 + 0.4;
+    this.life = Math.random() * 0.5 + 0.5; // Start with varied life
+    this.decay = Math.random() * 0.003 + 0.0005;
+  }
+
+  reset() {
+    // Equal distribution across all edges
+    const edge = Math.floor(Math.random() * 4);
+
+
+    switch(edge) {
+      case 0: // Top edge - full width
+        this.x = Math.random() * this.canvas.width;
+        this.y = -15;
+        this.vx = (Math.random() - 0.5) * 2.0;
+        this.vy = Math.random() * 2.5 + 1.2;
+        break;
+      case 1: // Bottom edge - full width
+        this.x = Math.random() * this.canvas.width;
+        this.y = this.canvas.height + 15;
+        this.vx = (Math.random() - 0.5) * 2.0;
+        this.vy = -(Math.random() * 2.5 + 1.2);
+        break;
+      case 2: // Left edge - full height
+        this.x = -15;
+        this.y = Math.random() * this.canvas.height;
+        this.vx = Math.random() * 2.5 + 1.2;
+        this.vy = (Math.random() - 0.5) * 2.0;
+        break;
+      default: // Right edge - full height
+        this.x = this.canvas.width + 10;
+        this.y = Math.random() * this.canvas.height;
+        this.vx = -(Math.random() * 2.5 + 1.2); // Strong leftward movement
+        this.vy = (Math.random() - 0.5) * 2.0;
+        break;
+    }
+
+    this.size = Math.random() * 4 + 2; // Bigger particles
+    this.opacity = Math.random() * 0.8 + 0.5; // More visible
+    this.life = 1;
+    this.decay = Math.random() * 0.002 + 0.0003; // Longer life
+  }
+
+  update(mouse) {
+    // Mouse interaction - stronger and more visible
+    const dx = mouse.x - this.x;
+    const dy = mouse.y - this.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    if (distance < 200) {
+      const force = (200 - distance) / 200;
+      const attraction = 0.25;
+      this.vx += (dx / distance) * force * attraction;
+      this.vy += (dy / distance) * force * attraction;
+
+    }
+
+    // Apply velocity
+    this.x += this.vx;
+    this.y += this.vy;
+
+    // Fade out over time
+    this.life -= this.decay;
+    this.opacity = this.life * 0.5;
+
+    // Reset if out of bounds or faded (check all edges)
+    if (this.y > this.canvas.height + 20 ||
+        this.y < -20 ||
+        this.x < -20 ||
+        this.x > this.canvas.width + 20 ||
+        this.life <= 0) {
+      this.reset();
+    }
+
+    // Less damping for more responsive movement
+    this.vx *= 0.992;
+    this.vy *= 0.992;
+  }
+
+  draw(ctx) {
+    ctx.save();
+    ctx.globalAlpha = Math.max(0.1, this.opacity);
+
+    // Random green colors that complement skin tones in portraits
+    const greenColors = [
+      '#2d5a27', // Dark forest green
+      '#3d7c47', // Medium forest green
+      '#4a9b59', // Fresh green
+      '#5cb370', // Bright green
+      '#6fcc7f', // Light green
+      '#7dd87f', // Mint green
+      '#8ee490', // Pale green
+      '#a0f0a0'  // Very light green
+    ];
+
+    const color = greenColors[Math.floor(Math.random() * greenColors.length)];
+
+    // Draw glowing particle with random green color
+    ctx.fillStyle = color;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = 8;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.restore();
+  }
+}
+
 const ParticleSystem = () => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const particlesRef = useRef([]);
   const mouseRef = useRef({ x: 0, y: 0 });
   const isRunningRef = useRef(true);
-
-  // Particle class for better performance
-  class Particle {
-    constructor(canvas) {
-      this.canvas = canvas;
-      // Start particles distributed across screen immediately
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = (Math.random() - 0.5) * 1.2;
-      this.vy = Math.random() * 1.5 + 0.8;
-      this.size = Math.random() * 3 + 1.5;
-      this.opacity = Math.random() * 0.7 + 0.4;
-      this.life = Math.random() * 0.5 + 0.5; // Start with varied life
-      this.decay = Math.random() * 0.003 + 0.0005;
-    }
-
-    reset() {
-      // Equal distribution across all edges
-      const edge = Math.floor(Math.random() * 4);
-
-
-      switch(edge) {
-        case 0: // Top edge - full width
-          this.x = Math.random() * this.canvas.width;
-          this.y = -15;
-          this.vx = (Math.random() - 0.5) * 2.0;
-          this.vy = Math.random() * 2.5 + 1.2;
-          break;
-        case 1: // Bottom edge - full width
-          this.x = Math.random() * this.canvas.width;
-          this.y = this.canvas.height + 15;
-          this.vx = (Math.random() - 0.5) * 2.0;
-          this.vy = -(Math.random() * 2.5 + 1.2);
-          break;
-        case 2: // Left edge - full height
-          this.x = -15;
-          this.y = Math.random() * this.canvas.height;
-          this.vx = Math.random() * 2.5 + 1.2;
-          this.vy = (Math.random() - 0.5) * 2.0;
-          break;
-        case 3: // Right edge - full height
-          this.x = this.canvas.width + 10;
-          this.y = Math.random() * this.canvas.height;
-          this.vx = -(Math.random() * 2.5 + 1.2); // Strong leftward movement
-          this.vy = (Math.random() - 0.5) * 2.0;
-          break;
-      }
-
-      this.size = Math.random() * 4 + 2; // Bigger particles
-      this.opacity = Math.random() * 0.8 + 0.5; // More visible
-      this.life = 1;
-      this.decay = Math.random() * 0.002 + 0.0003; // Longer life
-    }
-
-    update(mouse) {
-      // Mouse interaction - stronger and more visible
-      const dx = mouse.x - this.x;
-      const dy = mouse.y - this.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < 200) {
-        const force = (200 - distance) / 200;
-        const attraction = 0.25;
-        this.vx += (dx / distance) * force * attraction;
-        this.vy += (dy / distance) * force * attraction;
-
-      }
-
-      // Apply velocity
-      this.x += this.vx;
-      this.y += this.vy;
-
-      // Fade out over time
-      this.life -= this.decay;
-      this.opacity = this.life * 0.5;
-
-      // Reset if out of bounds or faded (check all edges)
-      if (this.y > this.canvas.height + 20 ||
-          this.y < -20 ||
-          this.x < -20 ||
-          this.x > this.canvas.width + 20 ||
-          this.life <= 0) {
-        this.reset();
-      }
-
-      // Less damping for more responsive movement
-      this.vx *= 0.992;
-      this.vy *= 0.992;
-    }
-
-    draw(ctx) {
-      ctx.save();
-      ctx.globalAlpha = Math.max(0.1, this.opacity);
-
-      // Random green colors that complement skin tones in portraits
-      const greenColors = [
-        '#2d5a27', // Dark forest green
-        '#3d7c47', // Medium forest green
-        '#4a9b59', // Fresh green
-        '#5cb370', // Bright green
-        '#6fcc7f', // Light green
-        '#7dd87f', // Mint green
-        '#8ee490', // Pale green
-        '#a0f0a0'  // Very light green
-      ];
-
-      const color = greenColors[Math.floor(Math.random() * greenColors.length)];
-
-      // Draw glowing particle with random green color
-      ctx.fillStyle = color;
-      ctx.shadowColor = color;
-      ctx.shadowBlur = 8;
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.restore();
-    }
-  }
 
   const handleMouseMove = useCallback((event) => {
     const canvas = canvasRef.current;

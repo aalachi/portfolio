@@ -2,7 +2,6 @@ import TopBar from "../../components/TopBar";
 import Footer from "../../components/Footer";
 import styles from "../Projects.module.css";
 import Servauth from "../../assets/projects/servauth.png";
-import Drag from "../../assets/projects/dragbrrr.gif";
 
 
 const ProjectServauth = () => {
