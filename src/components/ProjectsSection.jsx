@@ -13,7 +13,7 @@ const ProjectSection = () => {
     return(
         <div id="projectss" className={styles.container} >
             <div className={styles.content}>
-                <h2 data-aos="slide-down" data-aos-delay="200" data-aos-duration="600" data-aos-offset="150">What I have worked on</h2>
+                <h2 data-aos="slide-down" data-aos-delay="200" data-aos-duration="600" data-aos-offset="150">Code Playgrounds</h2>
 
                 <div className={styles.projectsContainer}>
                     <Link 

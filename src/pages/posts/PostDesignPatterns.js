@@ -25,7 +25,7 @@ const PostDesignPatterns = () => {
                     The idea was picked up by four authors: <i>Erich Gamma, John Vlissides, Ralph Johnson and Richard Helm</i>. In 1994, they published <b>Design Patterns: Elements of Reusable Object-Oriented Software</b>, in which they applied the concept of design patterns to programming. The book featured 23 patterns solving various problems of object-oriented design and became a best-seller very quickly. Due to its lengthy name, people started to call it “the book by the gang of four” which was soon shortened to simply <b>“the GoF book”</b>.</p>
                 <br></br>
                 <h2>The Catalog of Design Patterns</h2>
-                <img style={{boxShadow:"0"}} src="/design-patterns.png" alt="Design Patterns Catalog" />
+                <img className={styles.imgfixxpay}   src="/design-patterns.png" alt="Design Patterns Catalog" />
                 <br></br><br></br><br></br><br></br>
 
                 <h3>Singleton</h3>
