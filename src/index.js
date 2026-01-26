@@ -19,6 +19,7 @@ import PostRest from './pages/posts/PostRest';
 import { HelmetProvider } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ProjectFixxpay from './pages/projects/ProjectFixxpay';
 
 
 
@@ -46,6 +47,7 @@ root.render(
           <Route path="/projects/webmac" element={<ProjectWebmac />} />
           <Route path="/projects/calculator" element={<ProjectCalculator />} />
           <Route path="/projects/servauth" element={<ProjectServauth />} />
+          <Route path="/projects/fixxpay" element={<ProjectFixxpay />} />
 
           <Route path="/posts/vim" element={<PostVim />} />
           <Route path="/posts/auth" element={<PostAuth />} />

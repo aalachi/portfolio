@@ -13,7 +13,7 @@ const Footer = () => {
 <a target="_blank" href="https://www.linkedin.com/in/mohamed-aalachi-878479252/"><img src={Linkedin} width={20} /></a>
 <a target="_blank" href="https://www.youtube.com/@aalachideployed"><img src={Youtube} width={20} /></a>
 <a target="_blank" href="https://x.com/aalachilogs"><img src={Twitter} width={19} /></a></span>
-<span className={styles.copyright}>© 2023 - 2025</span></p></div>
+<span className={styles.copyright}>© 2023 - 2026</span></p></div>
                 </div>
 
     )

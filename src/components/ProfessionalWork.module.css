@@ -1,0 +1,246 @@
+.container{
+    width: 100vw;
+    background-color: #2d5a27;
+    z-index: 90;
+    color: white;
+    min-height: 50vh;
+}
+
+.content{
+    width: 760px;
+    padding-top: 40px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    width: 90vw;
+    font-family: Verdana, Geneva, 'DejaVu Sans', Arial, sans-serif;
+    opacity: 0.5;
+    font-size: 2rem;
+}
+
+
+.project{
+    background-color: #fcfcfc;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #22313f;
+    color: white;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-out;
+    transform: translateY(0);
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.projectImage{
+    max-width: 320px;
+    max-height: 320px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    transition: all 0.5s ease-out;
+}
+
+.projectImage img {
+    transition: all 0.4s ease-out;
+    transform: scale(1);
+}
+
+.project:hover .projectImage img {
+    transform: scale(1.05);
+}
+
+
+.projectText{
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    border-radius: 5px;
+    top: 320px;
+    transition: 0.5s ease-out;
+}
+
+.project:hover  .projectText{
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    border-radius: 5px;
+    top: 0px;
+    transition: 0.5s ease-out;
+    background-color: black;
+    opacity: 0.85;
+}
+
+.projectWrapper:hover  {
+    transition: 1s;
+    z-index: 100;
+}
+
+.projectText p{
+    font-family: Verdana, Geneva, 'DejaVu Sans', Arial, sans-serif;
+    padding: 20px;
+    padding-top: 0;
+    font-size: 0.8em;
+    width: 280px;
+}
+
+.projectText h3{
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.projectsContainer a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    width: auto;
+    height: 340px;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: relative;
+    right: 0px;
+    justify-content: left;
+    width: 60vw;
+}
+
+
+.projectWrapperServauth{
+    z-index: 20;
+}
+
+
+.projectWrapperOne{
+    z-index: 10;
+    margin-left: -100px;
+}
+
+.projectWrapperTwo{
+    z-index: 20;
+    margin-top: 100px;
+    margin-left: -100px;
+
+}
+
+.projectWrapperThree{
+    z-index: 10;
+    margin-left: -100px;
+}
+
+.projectWrapperFour{
+    z-index: 20;
+    margin-top: 100px;
+    margin-left: -100px;
+}
+
+.projectWrapperFive{
+    z-index: 20;
+    margin-top: -100px;
+    margin-left: -130px;
+}
+
+.projectWrapperSix{
+    z-index: 50;
+    margin-top: -90px;
+    margin-left: -60px;
+}
+
+.projectWrapperOne:hover{
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+    
+}
+
+.projectWrapperTwo:hover {
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.projectWrapperThree:hover {
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.projectWrapperFour:hover {
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.projectWrapperFive:hover {
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.projectWrapperSix:hover {
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.projectWrapperServauth:hover{
+    z-index: 100;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+
+@media only screen and (max-width: 980px) {
+    .projectsContainer a {
+      left: 0px;
+    }
+    .projectsContainer {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .projectWrapperOne {
+        margin: 0;
+    }
+
+    .projectWrapperTwo {
+        margin: 0;
+    }
+    .projectWrapperThree {
+        margin: 0;
+    }
+
+    .projectWrapperFour {
+        margin: 0;
+    }
+
+    .projectWrapperFive {
+        margin: 0;
+    }
+
+    .projectWrapperSix {
+        margin: 0;
+    }
+
+    .projectWrapperServauth{
+        margin-top: 20px;
+    }
+
+}

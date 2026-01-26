@@ -5,6 +5,7 @@ import AboutSection from '../components/AboutSection';
 import ProjectSection from '../components/ProjectsSection';
 import BlogSection from '../components/BlogSection';
 import { Helmet } from 'react-helmet-async';
+import ProfessionalWork from '../components/ProfessionalWork';
 
 const Home = () => {
 
@@ -57,6 +58,7 @@ const Home = () => {
           <div className={styles.container}>
               <HeroSection />
               <AboutSection />
+              <ProfessionalWork />
               <ProjectSection />
               <BlogSection />
               <Footer />
