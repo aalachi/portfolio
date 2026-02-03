@@ -20,19 +20,17 @@ const AboutSection = () => {
                 <div data-aos="fade-up" data-aos-delay="400">
                     <h2>Who am I</h2>
                     <p>
-                        I have always been passionate about building software, always strove to learn more, discover technologies
-                        and understand the different paradigms behind each one of them. <strong>The goal of my journey
-                        is to understand the secrets behind good software</strong> and its success.
+                        I can't tell how I developed a passion for solving algorithmic problems, it felt rewarding to solve a problem using logical fragments and see the outcome. This passion led me to pursue a career in software engineering, where I could apply my problem-solving skills to real-world challenges.
                     </p>
+
                     <p>
-                        As a result of this life long learning process, I am able to <strong>design and write 
-                        modular, expandable and clean software</strong>. I always try to <strong>solve
-                        problems in a language agnostic-manner</strong>, in order to choose the most suited technology to the
-                        problem at hand.
+                        I like to think of myself as a lifelong learner, always eager to explore new technologies and methodologies. 
                     </p>
+
                     <p>
-                        <strong>I believe in this being the main purpose of a software engineer !</strong>
+                        When I'm not coding, you can find me exploring the outdoors, reading tech blogs, or meditating. These activities help me maintain a balanced perspective and fuel my creativity.
                     </p>
+                    
                 </div>
             </AboutSubSection> 
             

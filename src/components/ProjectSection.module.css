@@ -129,7 +129,9 @@
 
 .projectWrapperMossaq{
     z-index: 40;
-    margin-left: -50px;
+    margin-top: 60px;
+    margin-right: 60px;
+    margin-left: -70px;
 }
 
 .projectWrapperOne{

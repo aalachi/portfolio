@@ -10,13 +10,12 @@ const Skills = () => {
         <div className={styles.skills}>
             <div className={styles.skill} data-aos="fade-up" data-aos-delay="700">
                 <div className={styles.title}>
-                    <h4>Good Design</h4>
+                    <h4>Conception</h4>
                 </div>
                 <i className="fa fa-pencil-ruler">
                     <img src={Pencil} width={40} alt="Pencil icon representing design" />
                 </i>
-                <p>The design is the most important phase of any software project. That's why I gathered important skill in
-                            that field to be able to make good software.</p>
+                <p>Conception of software architecture and design patterns. It involves functional analysis, data modeling, and defining system architecture.</p>
             </div>
             <div className={styles.skill} data-aos="fade-up" data-aos-delay="800">
                 <div className={styles.title}>
