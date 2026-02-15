@@ -23,11 +23,11 @@ const Home = () => {
               "alternateName": "Mohamed Aalachi",
               "jobTitle": "Software Engineer",
               "description": "Software Engineer specializing in full-stack development, modern web technologies, and clean code architecture",
-              "url": "https://a3lachi.vercel.app/",
-              "image": "https://a3lachi.vercel.app/a3la.jpg",
+              "url": "https://aalachi.vercel.app/",
+              "image": "https://aalachi.vercel.app/a3la.jpg",
               "email": "mad.aalachi@gmail.com",
               "sameAs": [
-                "https://www.github.com/a3lachi",
+                "https://www.github.com/aalachi",
                 "https://www.linkedin.com/in/mohamed-aalachi-878479252/",
                 "https://www.youtube.com/channel/UC2A26hYnRVkNp1vn1eWSeCg",
                 "https://twitter.com/a3laxi"
