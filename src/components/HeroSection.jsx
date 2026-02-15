@@ -41,6 +41,7 @@ const HeroSection = () => {
                     />
                 </div>
                 {showName && (
+                    
                     <div className={styles.name}>
                         <TypeWriter
                             text="AALACHI MOHAMED"
