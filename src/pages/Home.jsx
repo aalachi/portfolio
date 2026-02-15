@@ -12,15 +12,15 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Aalachi Mohamed - Software Engineer Portfolio</title>
+        <title>Aalachi Mohamed</title>
         <meta name="description" content="Aalachi Mohamed - Software Engineer specializing in full-stack development, modern web technologies, and clean code architecture. Portfolio featuring React, Python, Java, and C projects." />
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Aalachi Mohamed",
-              "alternateName": "Mohamed Aalachi",
+              "name": "Mohamed Aalachi",
+              "alternateName": "Aalachi Mohamed",
               "jobTitle": "Software Engineer",
               "description": "Software Engineer specializing in full-stack development, modern web technologies, and clean code architecture",
               "url": "https://aalachi.vercel.app/",
@@ -29,8 +29,8 @@ const Home = () => {
               "sameAs": [
                 "https://www.github.com/aalachi",
                 "https://www.linkedin.com/in/mohamed-aalachi-878479252/",
-                "https://www.youtube.com/channel/UC2A26hYnRVkNp1vn1eWSeCg",
-                "https://twitter.com/a3laxi"
+                "https://www.youtube.com/@aalachideployed",
+                "https://twitter.com/aalachilogs"
               ],
               "knowsAbout": [
                 "Software Engineering",

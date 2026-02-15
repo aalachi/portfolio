@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://aalachi.vercel.app/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://aalachi.vercel.app/posts/vim</loc>
-    <lastmod>2023-11-20</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
