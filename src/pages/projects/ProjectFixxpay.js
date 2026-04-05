@@ -28,7 +28,7 @@ const ProjectFixxpay = () => {
                 <h2>Role</h2>
                 <p>Full Stack Engineer (Django & Python), I developed the entire platform from scratch, it includes the apps : authentication, users, blog, cart, comparison, contact us, orders, payments (Paypal and Caixa), products, reviews, search, newsletter and wishlist.</p>
                 <h2>The Challenge</h2>
-                Generic e-commerce platforms often force users to register before buying, which kills conversion rates. The goal was to build a system that supports a frictionless Hybrid Checkout Architecture, allowing secure transactions for both authenticated users and guest visitors without compromising data integrity.
+                <p>Generic e-commerce platforms often force users to register before buying, which kills conversion rates. The goal was to build a system that supports a frictionless Hybrid Checkout Architecture, allowing secure transactions for both authenticated users and guest visitors without compromising data integrity.</p>
             </div>
 
             <Footer />
