@@ -8,6 +8,12 @@
 }
 
 
+.postcontainer h3{
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
 .posttitle{
     font-size: 45px;
     text-align: left;
