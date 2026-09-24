@@ -114,6 +114,7 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
     position: relative;
+    gap:20px;
     right: 0px;
     justify-content: left;
     width: 60vw;
@@ -122,6 +123,12 @@
 
 .projectWrapperServauth{
     z-index: 20;
+}
+
+.projectWrapperSakanly {
+    z-index: 40;
+    /* margin-top: -100px;
+    margin-left:130px; */
 }
 
 
@@ -212,6 +219,7 @@
         flex-direction: column;
         display: flex;
         justify-content: center;
+
         align-items: center;
         width: 100%;
 

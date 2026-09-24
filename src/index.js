@@ -21,6 +21,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectFixxpay from './pages/projects/ProjectFixxpay';
 import ProjectMossaq from './pages/projects/ProjectMossaq';
+import ProjectSakanly from './pages/projects/ProjectSakanly';
 
 
 
@@ -41,6 +42,7 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
 
+          <Route path="/projects/sakanly" element={<ProjectSakanly />} />
           <Route path="/projects/dorker" element={<ProjectDorker />} />
           <Route path="/projects/datano" element={<ProjectDatano />} />
           <Route path="/projects/bapz" element={<ProjectBapz />} />
