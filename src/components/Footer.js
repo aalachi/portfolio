@@ -3,8 +3,6 @@ import Github from '../assets/img/github.svg';
 import Linkedin from '../assets/img/linkedin.svg';
 import Twitter from '../assets/img/x.svg';
 import Youtube from '../assets/img/youtube.svg';
-import Substack from '../assets/img/substack.jpg';
-
 
 const Footer = () => {
 
